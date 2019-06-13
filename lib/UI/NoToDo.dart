@@ -17,7 +17,6 @@ class _NoToDoState extends State<NoToDo> {
     _textEditingController.clear();
     NoDoItem noDoItem = new NoDoItem(text, dateFormatted());
     int savedItemId = await db.saveItem(noDoItem);
-    print("Item id is $savedItemId");
     NoDoItem addedItem = await db.getItem(savedItemId);
 
     setState(() {

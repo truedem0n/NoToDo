@@ -44,7 +44,6 @@ class DatabaseHelper {
   Future<int> saveItem(NoDoItem item) async {
     var dbClient = await db;
     int res = await dbClient.insert("$tableName", item.toMap());
-    print(res.toString());
     return res;
   }
 
